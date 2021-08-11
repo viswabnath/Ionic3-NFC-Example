@@ -5,12 +5,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { NFC, Ndef } from "@ionic-native/nfc";
+import { MainPage } from '../pages/main/main';
+import { ReadNfcPage } from '../pages/read-nfc/read-nfc';
+import { WriteNfcPage } from '../pages/write-nfc/write-nfc';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    MainPage,
+    ReadNfcPage,
+    WriteNfcPage
   ],
   imports: [
     BrowserModule,
@@ -19,11 +24,14 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    MainPage,
+    ReadNfcPage,
+    WriteNfcPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    NFC, Ndef,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

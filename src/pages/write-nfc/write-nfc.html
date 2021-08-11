@@ -1,0 +1,18 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>write-nfc</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="inputs">
+    <form class="list-form" #frm="ngForm">
+      <div class="wrap-input">
+        <input class="input" type="text" name="tagContent" [(ngModel)]="tagContent" placeholder="tag Content" required>
+      </div>
+      <button ion-button (click)="write()"> write</button>
+  </form>
+  </div>
+
+</ion-content>
